@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github/yunplusplus/tools/io.yunplusplus.encoding"
+	base64 "github.com/yunplusplus/tools/io.yunplusplus.encoding"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -60,6 +60,6 @@ func Request() {
 func main() {
 	var c = base64.Encode64("赵云涛")
 	log.Println(c)
-	c = base64.Encode64("赵云涛")
+	c, _ = base64.Decode64(c)
 	log.Println(c)
 }
